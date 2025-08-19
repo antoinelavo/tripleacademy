@@ -133,21 +133,21 @@ const ProgramsSection = () => {
         </div>
 
         {/* Program Selector */}
-        <div className="flex flex-wrap justify-center mb-12">
-          <div className="inline-flex bg-gray-100 rounded-2xl p-2">
+        <div className="flex flex-wrap justify-center mb-8 md:mb-12">
+          <div className="flex flex-col sm:inline-flex sm:flex-row bg-gray-100 rounded-xl md:rounded-2xl p-1 md:p-2 w-full sm:w-auto">
             {Object.entries(programs).map(([key, program]) => {
               const IconComp = program.icon;
               return (
                 <button
                   key={key}
                   onClick={() => setActiveProgram(key)}
-                  className={`flex items-center space-x-2 px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
+                  className={`flex items-center justify-center sm:justify-start space-x-1 sm:space-x-2 px-3 sm:px-4 md:px-6 py-2 sm:py-3 rounded-lg md:rounded-xl font-semibold text-sm sm:text-base transition-all duration-300 ${
                     activeProgram === key
                       ? `${getColorClasses(program.color, 'bg')} text-white shadow-lg`
                       : 'text-gray-600 hover:text-gray-900 hover:bg-gray-200'
                   }`}
                 >
-                  <IconComp className="w-5 h-5" />
+                  <IconComp className="w-4 h-4 sm:w-5 sm:h-5" />
                   <span className="whitespace-nowrap">{program.title}</span>
                 </button>
               );

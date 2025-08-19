@@ -96,8 +96,8 @@ december2024: {
         </div>
 
         {/* Test Date Tabs */}
-        <div className="flex flex-wrap justify-center mb-12 gap-[1em]">
-          <div className="inline-flex bg-white rounded-2xl p-2 shadow-lg border border-gray-100">
+        <div className="flex flex-col sm:flex-row sm:flex-wrap justify-center mb-8 md:mb-12 gap-2 md:gap-4">
+          <div className="flex flex-col sm:inline-flex sm:flex-row bg-white rounded-xl md:rounded-2xl p-1 md:p-2 shadow-lg border border-gray-100">
             {tabs.map((tab) => (
               <button
                 key={tab}
@@ -199,16 +199,10 @@ december2024: {
                         result.score === 1600 ? 'text-blue-600' : 'text-gray-900'
                       }`}>
                         {result.score}
-                        {result.score === 1600 && (
-                          <span className="ml-2 inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">
-                            <Trophy className="w-3 h-3 mr-1" />
-                            만점
-                          </span>
-                        )}
+
                       </td>
                       <td className="px-6 py-4 text-gray-700">
-                        <div className="flex items-center">
-                          <School className="w-4 h-4 mr-2 text-gray-400" />
+                        <div className="flex items-center min-w-[3em]">
                           {result.school}
                         </div>
                       </td>
