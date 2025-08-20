@@ -8,7 +8,7 @@ const Header = () => {
     { name: '프로그램', href: '/#programs' },
     { name: '결과', href: '/#results' },
     { name: '강사진', href: '/teachers' },
-    { name: '블로그', href: '/blog' },
+    { name: '블로그', href: 'https://blog.naver.com/tripleprep/222123263524' },
     { name: '문의', href: '/#contact' }
   ];
 
